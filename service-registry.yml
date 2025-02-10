@@ -1,0 +1,9 @@
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost  # Nombre del host donde corre Eureka
+  client:
+    register-with-eureka: false  # No se auto-registra (porque es el servidor)
+    fetch-registry: false  # No necesita obtener otros servicios
