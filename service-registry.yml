@@ -7,7 +7,8 @@ server:
 
 eureka:
   instance:
-    hostname: localhost  
+    hostname: localhost
+
   client:
     register-with-eureka: false  # No se auto-registra (porque es el servidor)
     fetch-registry: false  # No necesita obtener otros servicios
