@@ -1,4 +1,4 @@
-server:
+eoserver:
   port: 8081
 
 spring:
@@ -6,30 +6,25 @@ spring:
     name: user-service  # Nombre del servicio para Eureka y Config Server
   cloud:
     config:
-      uri: http://localhost:8888  # URL del Config Server
-      fail-fast: true  # Si falla la configuración, la app no inicia
+      uri: http://localhost:8888  
+      fail-fast: true  
   datasource:
-    url: jdbc:mysql://localhost:3306/restaurant_users?useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/tc_userdb?useSSL=false&serverTimezone=UTC
     username: root
     password: 1234
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: update  # Opción para actualizar la base de datos automáticamente
+      ddl-auto: update  
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQL8Dialect  # Dialecto de MySQL
+        dialect: org.hibernate.dialect.MySQL8Dialect  
 
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka  # URL del servidor Eureka
-    register-with-eureka: true  # Registra este servicio en Eureka
-    fetch-registry: true  # Obtiene información de otros servicios registrados
+    register-with-eureka: true 
+    fetch-registry: true  
   instance:
-    prefer-ip-address: true  # Usa la IP en lugar del nombre de host para registrarse
-
-logging:
-  level:
-    root: INFO
-    org.springframework.web: DEBUG
+    prefer-ip-address: true  
