@@ -9,7 +9,7 @@ spring:
       uri: http://localhost:8888
       fail-fast: true
   datasource:
-    url: jdbc:mysql://localhost:3306/ncd_meetings?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&useLegacyDatetimeCode=false
+    url: jdbc:mysql://localhost:3307/ncd_meetings?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&useLegacyDatetimeCode=false
     username: root
     password: 1234
     driver-class-name: com.mysql.cj.jdbc.Driver
